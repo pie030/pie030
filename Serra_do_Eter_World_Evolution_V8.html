@@ -113,6 +113,7 @@ const climb=[[1900,valley(1900),vy(1900)],[1890,3890,64],[1550,3550,87],[1190,33
 const east=[[5200,valley(5200),vy(5200)],[5440,3850,65],[5850,3610,88],[6200,3440,110],[6290,3180,131],[6020,2940,151],[5600,2870,172],[5290,2610,194],[5550,2350,221],[6210,2240,250],[6400,1900,272]];
 const conn=[[3750,valley(3750),vy(3750)],[3580,4780,37],[3535,5150,31],[3530,5430,24],[3750,coast(3750)-315,cy(3750)]];
 const ring=Array.from({length:65},(_,i)=>{const a=i*2*PI/64;return[4550+780*Math.cos(a),5100+520*Math.sin(a),31+2*Math.sin(a*2)];});
+const accessLake=[[3535,5150,31],[3630,5130,31],[3770,5100,31]];
 const forest=[[1050,valley(1050),vy(1050)],[990,3780,63],[760,3540,78],[840,3230,93],[650,3000,108]];
 const routes=[
  {name:'Rodovia do Vale',type:'main',w:12,pts:spline(highway,9)},
@@ -121,6 +122,7 @@ const routes=[
  {name:'Serra Oriental',type:'serra',w:10.5,pts:spline(east,19)},
  {name:'Ligação do Litoral',type:'local',w:10,pts:spline(conn,17)},
  {name:'Circuito do Lago',type:'local',w:9.5,pts:spline(ring,3)},
+ {name:'Acesso ao Lago',type:'local',w:9,pts:spline(accessLake,14)},
  {name:'Estrada dos Lúmens',type:'local',w:9,pts:spline(forest,18)}
 ];
 const BUCKET=160,buckets=new Map(),segments=[];
@@ -337,7 +339,7 @@ function updateChunks(){
   const tx=cx+dx,tz=cz+dz;if(tx<0||tz<0||tx>=28||tz>=28)continue;
   const k=key(tx,tz),distance=Math.max(Math.abs(dx),Math.abs(dz)),lod=distance<=2?0:distance<=3?1:2;
   wanted.set(k,lod);
-  const obj=chunks.get(k);if(!obj||obj.lod>lod)need.push({tx,tz,k,lod,d:dx*dx+dz*dz});
+  const obj=chunks.get(k);if(!obj||obj.lod!==lod)need.push({tx,tz,k,lod,d:dx*dx+dz*dz});
  }
  need.sort((a,b)=>a.d-b.d);
  for(const q of need.slice(0,3)){
@@ -451,7 +453,7 @@ $('chase').onclick=()=>{camera(0);$('drawer').style.display='none';};
 $('minus').onclick=()=>zoomBy(1.2);$('plus').onclick=()=>zoomBy(.83);
 $('map').onclick=()=>{showMap=!showMap;$('miniwrap').style.display=showMap?'block':'none';if(showMap)minimap();};
 $('menu').onclick=()=>{$('drawer').style.display=$('drawer').style.display==='block'?'none':'block';};
-$('travel').onclick=()=>{const points={curves:[2,150],base:[2,1],pass:[2,routes[2].pts.length-21],cliff:[2,205],east:[3,112],valley:[0,92],forest:[6,42],lake:[5,50],coast:[1,120]};const q=points[$('dest').value];teleport(q[0],q[1]);$('drawer').style.display='none';};
+$('travel').onclick=()=>{const points={curves:[2,150],base:[2,1],pass:[2,routes[2].pts.length-21],cliff:[2,205],east:[3,112],valley:[0,92],forest:[7,42],lake:[5,50],coast:[1,120]};const q=points[$('dest').value];teleport(q[0],q[1]);$('drawer').style.display='none';};
 $('auto').onclick=()=>{if(!autopilot){teleport(2,0);pilotDistance=0;autopilot=true;$('auto').textContent='Parar percurso automático';}else{autopilot=false;car.speed=0;$('auto').textContent='Percorrer subida automaticamente';}};
 $('reset').onclick=()=>teleport(2,150);
 $('quality').onclick=()=>{eco=!eco;for(const c of chunks.values()){dispose(c.ground);dispose(c.decor);}chunks.clear();$('quality').textContent='Qualidade: '+(eco?'econômica':'equilibrada');};
