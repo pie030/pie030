@@ -183,7 +183,14 @@ const norm=a=>{const n=Math.hypot(...a)||1;return a.map(v=>v/n);};
 function view(eye,target,up){const z=norm(sub(eye,target));let x=cross(up,z);if(Math.hypot(...x)<.001)x=cross([0,0,-1],z);x=norm(x);const y=cross(z,x);return new Float32Array([x[0],y[0],z[0],0,x[1],y[1],z[1],0,x[2],y[2],z[2],0,-dot(x,eye),-dot(y,eye),-dot(z,eye),1]);}
 function mult(a,b){const m=new Float32Array(16);for(let j=0;j<4;j++)for(let i=0;i<4;i++)for(let k=0;k<4;k++)m[j*4+i]+=a[k*4+i]*b[j*4+k];return m;}
 function projection(aspect,far){const m=new Float32Array(16),near=.4,f=1/Math.tan(1.02/2);m[0]=f/aspect;m[5]=f;m[10]=(far+near)/(near-far);m[11]=-1;m[14]=2*far*near/(near-far);return m;}
-function model(x,y,z,a){const s=Math.sin(a),c=Math.cos(a);return new Float32Array([c,0,-s,0,0,1,0,0,s,0,c,0,x,y,z,1]);}
+// Matrizes tridimensionais: yaw, inclinação longitudinal e rolagem.
+function model(x,y,z,a,pitch=0,roll=0){
+ const s=Math.sin(a),c=Math.cos(a),sp=Math.sin(pitch),cp=Math.cos(pitch),sr=Math.sin(roll),cr=Math.cos(roll);
+ // Right=(c,0,-s), UpPitch=(-s*sp,cp,-c*sp), ForwardPitch=(s*cp,sp,c*cp).
+ const rx=c*cr-s*sp*sr,ry=cp*sr,rz=-s*cr-c*sp*sr;
+ const ux=-c*sr-s*sp*cr,uy=cp*cr,uz=s*sr-c*sp*cr;
+ return new Float32Array([rx,ry,rz,0,ux,uy,uz,0,s*cp,sp,c*cp,0,x,y,z,1]);
+}
 function draw(o,M,pv,eye,far){
  gl.uniformMatrix4fv(U.model,false,M);gl.uniformMatrix4fv(U.mvp,false,mult(pv,M));gl.uniform3fv(U.eye,eye);gl.uniform1f(U.fog,far);
  gl.bindBuffer(gl.ARRAY_BUFFER,o.pb);gl.vertexAttribPointer(A.pos,3,gl.FLOAT,false,0,0);gl.enableVertexAttribArray(A.pos);
@@ -202,10 +209,12 @@ function roadMesh(){
    band(0,2*w+7,.15,[.48,.42,.32]);band(0,2*w,.38,[.21,.26,.26]);
    band(-w+.6,.25,.44,[.85,.82,.72]);band(w-.6,.25,.44,[.85,.82,.72]);
    if(i%6<3)band(0,.33,.46,[.85,.78,.53]);
-   if(r.type==='serra'&&i%7===0)for(const side of [-1,1]){
-    const test=point(a,n1,side*(w+30),0);
-    if(raw(test[0],test[2])>a.h-14)continue;
-    const q=point(a,n1,side*(w+2.4),0);box(p,c,[q[0]-.2,a.h+.3,q[2]-.2],[q[0]+.2,a.h+1.5,q[2]+.2],[.60,.64,.59]);
+   if(r.type==='serra')for(const side of [-1,1]){
+    const test=point(a,n1,side*(w+31),0);
+    if(raw(test[0],test[2])>a.h-12)continue;
+    const q=point(a,n1,side*(w+2.5),0),e=point(b,n2,side*(w+2.5),0);
+    if(i%5===0)box(p,c,[q[0]-.17,a.h+.32,q[2]-.17],[q[0]+.17,a.h+1.50,q[2]+.17],[.58,.63,.60]);
+    quad(p,c,[q[0],a.h+1.04,q[2]],[e[0],b.h+1.04,e[2]],[e[0],b.h+1.35,e[2]],[q[0],a.h+1.35,q[2]],[.72,.74,.67]);
    }
   }
  }
@@ -308,7 +317,7 @@ function surface(x,z){
 }
 let mode=3,orbit=0,zoom=1,zoomWant=1,eye=[0,0,0],target=[0,0,0],up=[0,1,0],ready=false;
 let autopilot=false,pilotDistance=0,showMap=false,lastMap=0,last=0,fps=60,frames=0;
-const keys=new Set(),car={x:0,z:0,y:0,yaw:0,speed:0};
+const keys=new Set(),car={x:0,z:0,y:0,yaw:0,speed:0,pitch:0,roll:0};
 function sample(r,d){
  d=cl(d,0,r.length);
  let lo=0,hi=r.dist.length-1;
@@ -318,7 +327,7 @@ function sample(r,d){
 }
 function teleport(route,index){
  const r=routes[route],i=cl(index,0,r.pts.length-2),a=r.pts[i],b=r.pts[i+1];
- car.x=a.x;car.z=a.z;car.y=a.h+.38;car.yaw=Math.atan2(b.x-a.x,b.z-a.z);car.speed=0;
+ car.x=a.x;car.z=a.z;car.y=a.h+.38;car.yaw=Math.atan2(b.x-a.x,b.z-a.z);car.speed=0;car.pitch=0;car.roll=0;
  autopilot=false;ready=false;$('auto').textContent='Percorrer subida automaticamente';
 }
 teleport(2,150);
@@ -341,7 +350,7 @@ function move(dt){
  if(autopilot){
   pilotDistance+=dt*38;const r=routes[2];
   if(pilotDistance>=r.length){autopilot=false;car.speed=0;$('auto').textContent='Percorrer subida automaticamente';return;}
-  const q=sample(r,pilotDistance);car.x=q.x;car.z=q.z;car.y=q.h+.38;car.yaw=q.yaw;car.speed=38;return;
+  const q=sample(r,pilotDistance);car.x=q.x;car.z=q.z;car.y=q.h+.38;car.yaw=q.yaw;car.speed=38;car.pitch=0;car.roll=0;return;
  }
  const gas=keys.has('w')||keys.has('arrowup'),reverse=keys.has('s')||keys.has('arrowdown');
  car.speed=cl(car.speed+dt*((gas?33:0)-(reverse?46:0)-car.speed*.50),-18,66);
@@ -352,6 +361,15 @@ function move(dt){
  const r=road(nx,nz),ny=r.onRoad?r.h+.38:surface(nx,nz);
  if(water(nx,nz)||Math.abs(ny-car.y)/Math.max(.5,Math.abs(car.speed)*dt)>1){car.speed*=-.15;return;}
  car.x=nx;car.z=nz;car.y=mix(car.y,ny,cl(dt*10,0,1));
+ const forward=[Math.sin(car.yaw),Math.cos(car.yaw)],right=[Math.cos(car.yaw),-Math.sin(car.yaw)];
+ const hsample=(dx,dz)=>{
+  const x=cl(car.x+dx,3,WORLD-3),z=cl(car.z+dz,3,WORLD-3),v=road(x,z);
+  return v.onRoad?v.h+.38:surface(x,z);
+ };
+ const f=hsample(forward[0]*3,forward[1]*3),b=hsample(-forward[0]*3,-forward[1]*3);
+ const l=hsample(-right[0]*1.3,-right[1]*1.3),rr=hsample(right[0]*1.3,right[1]*1.3);
+ car.pitch=mix(car.pitch,cl(Math.atan2(f-b,6),-.25,.25),cl(dt*6,0,1));
+ car.roll=mix(car.roll,cl(-Math.atan2(rr-l,2.6),-.19,.19),cl(dt*6,0,1));
  if(r.d>r.w+6)car.speed*=Math.pow(.982,dt*60);
 }
 function resize(){
@@ -421,7 +439,7 @@ function frame(now){
  draw(sea,ID,pv,eye,far);
  draw(horizon,ID,pv,eye,far);
  for(const c of chunks.values()){draw(c.ground,ID,pv,eye,far);if(c.decor.n)draw(c.decor,ID,pv,eye,far);}
- draw(asphalt,ID,pv,eye,far);draw(carMesh,model(car.x,car.y+.12,car.z,car.yaw),pv,eye,far);
+ draw(asphalt,ID,pv,eye,far);draw(carMesh,model(car.x,car.y+.12,car.z,car.yaw,car.pitch,car.roll),pv,eye,far);
  $('speed').textContent=Math.round(Math.abs(car.speed)*3.6);$('altitude').textContent=Math.round(car.y);$('region').textContent=region();
  if(frames++%20===0)$('info').textContent=Math.round(fps)+' FPS estimados · '+chunks.size+' blocos · '+(eco?'ECO':'Equilibrado');
  if(showMap&&now-lastMap>850){lastMap=now;minimap();}
