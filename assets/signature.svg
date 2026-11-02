@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="96" viewBox="0 0 1240 96" role="img" aria-labelledby="title"><title id="title">Made to be useful. Built to feel different.</title><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#91CDAE"/><stop offset="1" stop-color="#C9F27F"/></linearGradient></defs><rect x="0" y="0" width="1240" height="96" rx="14" fill="#101720"/><rect x="0" y="0" width="8" height="96" fill="url(#g)"/><text x="33" y="55" font-family="'DejaVu Sans Mono',Consolas,monospace" font-size="21" fill="#E0E9E3" letter-spacing="1">Made to be useful. Built to feel different.</text><text x="1136" y="54" font-family="'DejaVu Sans Mono',Consolas,monospace" font-size="20" font-weight="bold" fill="#C9F27F">B/.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="112" viewBox="0 0 1440 112" role="img" aria-labelledby="fttitle">
+<title id="fttitle">Pietro Braz — an ongoing archive of interactive experiments</title>
+<rect width="1440" height="112" fill="#F1EEE7"/>
+<path d="M84 20H1356" stroke="#BBBFB5" stroke-width="1"/>
+<rect x="84" y="45" width="9" height="31" fill="#D36E56"/>
+<text x="111" y="69" font-family="Arial,Helvetica,sans-serif" font-size="22" letter-spacing=".2" font-weight="600" fill="#1A2825">An ongoing collection of working ideas.</text>
+<text x="1355" y="67" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" letter-spacing="2" fill="#4B6259">PIE030 / PORTFOLIO</text>
+</svg>
