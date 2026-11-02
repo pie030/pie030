@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/hero.svg" width="100%" alt="Pietro Braz — interactive software, 3D environments and a topographic field study." />
+  <img src="./assets/hero.svg" width="100%" alt="Pietro Braz — editorial banner with four areas: 3D Assets, Environments, Game Development, and World Building." />
 </div>
 
 <br>
