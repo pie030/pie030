@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="404" viewBox="0 0 1240 404" role="img" aria-labelledby="title desc">
+  <title id="title">BRAZ — Digital craft, interactive systems</title>
+  <desc id="desc">Editorial dark banner with a vivid lime accent, bold BRAZ typography and abstract terrain contours</desc>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1018"/>
+      <stop offset="0.55" stop-color="#111924"/>
+      <stop offset="1" stop-color="#162028"/>
+    </linearGradient>
+    <linearGradient id="terrain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#BDE8B1" stop-opacity="0.86"/>
+      <stop offset="1" stop-color="#5FAD99" stop-opacity="0.13"/>
+    </linearGradient>
+    <linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C9F27F"/>
+      <stop offset="1" stop-color="#7BBBAA"/>
+    </linearGradient>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+      <path d="M38 0H0V38" fill="none" stroke="#A5B7C2" stroke-opacity="0.067" stroke-width="1"/>
+    </pattern>
+    <clipPath id="clip"><rect width="1240" height="404" rx="18"/></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="1240" height="404" fill="url(#base)"/>
+    <rect width="1240" height="404" fill="url(#grid)"/>
+    <path d="M0 0H1240" stroke="#C9F27F" stroke-opacity=".62" stroke-width="4"/>
+    <path d="M0 401H1240" stroke="#8C9CA8" stroke-opacity=".22"/>
+    <path d="M58 58V345" stroke="#C9F27F" stroke-width="3"/>
+    <rect x="80" y="55" width="9" height="9" fill="#C9F27F"/>
+    <text x="101" y="65" font-family="'DejaVu Sans Mono',Consolas,monospace" font-size="13" letter-spacing="3" fill="#D6E4D0">PIE030  /  PERSONAL WORKSPACE</text>
+    <text x="79" y="205" font-family="'DejaVu Sans',Arial,sans-serif" font-size="146" font-weight="800" letter-spacing="-11" fill="#F1F4EF">BRAZ<tspan fill="#C9F27F">.</tspan></text>
+    <text x="82" y="263" font-family="'DejaVu Sans',Arial,sans-serif" font-size="25" font-weight="400" letter-spacing=".2" fill="#C4D2D4">Building what doesn't exist yet.</text>
+    <path d="M81 291H615" stroke="#9CAEB5" stroke-opacity=".31"/>
+    <text x="81" y="329" font-family="'DejaVu Sans Mono',Consolas,monospace" font-size="13" letter-spacing="1.5" fill="#AFC0BD">WEB EXPERIENCES</text>
+    <text x="284" y="329" font-family="'DejaVu Sans Mono',Consolas,monospace" font-size="13" letter-spacing="1.5" fill="#AFC0BD">3D WORLDS</text>
+    <text x="435" y="329" font-family="'DejaVu Sans Mono',Consolas,monospace" font-size="13" letter-spacing="1.5" fill="#AFC0BD">SYSTEMS</text>
+    <g fill="none" stroke="url(#terrain)" stroke-width="1.6" opacity=".95">
+      <path d="M754 441C668 352 741 281 827 257C904 236 926 198 937 153C946 99 1011 71 1076 91C1134 109 1188 94 1266 28"/>
+      <path d="M781 439C709 350 768 300 842 282C915 264 948 223 963 163C974 117 1023 96 1081 111C1144 127 1195 115 1265 59"/>
+      <path d="M807 439C754 370 784 322 861 304C928 289 971 250 987 183C1005 134 1036 119 1091 135C1154 153 1208 137 1273 92"/>
+      <path d="M834 439C785 379 817 347 878 326C959 303 994 267 1012 199C1030 155 1050 145 1101 158C1164 177 1213 163 1273 123"/>
+      <path d="M860 440C826 398 835 372 904 351C977 329 1017 291 1038 223C1053 180 1071 168 1112 182C1176 202 1212 189 1268 156"/>
+      <path d="M885 443C861 409 870 395 927 375C996 350 1042 311 1061 245C1077 201 1090 195 1122 206C1179 228 1220 213 1270 186"/>
+      <path d="M916 447C900 425 910 419 947 400C1020 378 1059 334 1086 267C1102 229 1111 218 1133 231C1189 253 1221 241 1268 218"/>
+      <path d="M947 448C944 438 953 432 977 421C1038 397 1084 356 1111 286C1129 247 1134 242 1145 253C1196 277 1228 270 1272 247"/>
+    </g>
+    <g opacity=".8">
+      <circle cx="1040" cy="117" r="46" fill="none" stroke="#C9F27F" stroke-opacity=".21"/>
+      <circle cx="1040" cy="117" r="26" fill="none" stroke="#C9F27F" stroke-opacity=".44"/>
+      <circle cx="1040" cy="117" r="4" fill="#C9F27F"/>
+      <path d="M1040 55V179M978 117H1102" stroke="#C9F27F" stroke-opacity=".24" stroke-dasharray="4 8"/>
+    </g>
+    <path d="M693 61V347" stroke="#A5B7C2" stroke-opacity=".25"/>
+    <text x="720" y="64" font-family="'DejaVu Sans Mono',Consolas,monospace" font-size="12" letter-spacing="1.5" fill="#8DAAA3">FIG. 01 / EXPLORE</text>
+    <text x="1102" y="353" font-family="'DejaVu Sans Mono',Consolas,monospace" font-size="12" letter-spacing="1" fill="#ABC7BD">EST. IN PROGRESS</text>
+  </g>
+</svg>
