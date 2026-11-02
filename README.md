@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/hero.png" width="100%" alt="Pietro Braz — editorial banner with four areas: 3D Assets, Environments, Game Development, and World Building." />
+  <img src="./assets/hero-approved.webp" width="100%" alt="Pietro Braz — editorial banner with four areas: 3D Assets, Environments, Game Development, and World Building." />
 </div>
 
 <br>
