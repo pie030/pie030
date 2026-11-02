@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/hero.svg" width="100%" alt="BRAZ — web experiences, 3D worlds and systems. Building what doesn't exist yet." />
+  <img src="./assets/hero.svg" width="100%" alt="Pietro Braz — Curiosity has structure. Interactive worlds, digital objects, working ideas." />
 </div>
 
 <br />
@@ -65,5 +65,5 @@ I'm especially interested in procedural worlds, simulations, visual design and t
 I'm organizing selected projects into public repositories with clear documentation, screenshots and usable demos. For now, the work above describes prototypes and creative studies; source repositories will be linked as they are released.
 
 <div align="center">
-  <img src="./assets/signature.svg" width="100%" alt="Made to be useful. Built to feel different." />
+  <img src="./assets/signature.svg" width="100%" alt="An ongoing collection of working ideas — Pietro Braz." />
 </div>
