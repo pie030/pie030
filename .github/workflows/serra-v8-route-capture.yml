@@ -1,0 +1,41 @@
+name: Serra do Eter V8 Full Route Visual Inspection
+on:
+  push:
+    branches:
+      - serra-do-eter-v8-world-evolution
+    paths:
+      - 'tests/serra-v8-route-capture.mjs'
+      - 'Serra_do_Eter_World_Evolution_V8.html'
+      - '.github/workflows/serra-v8-route-capture.yml'
+  workflow_dispatch:
+
+jobs:
+  inspect-world:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install headless browser and image processor
+        run: |
+          npm install --no-save playwright@1.56.1 sharp@0.34.5
+          npx playwright install --with-deps chromium
+      - name: Serve standalone world
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/sde-web.log 2>&1 &
+          sleep 3
+      - name: Drive and capture all 8 routes and map sectors
+        run: node tests/serra-v8-route-capture.mjs
+      - name: Upload screenshots and diagnostic gallery
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: serra-do-eter-v8-inspecao-geral
+          path: artifacts/inspecao-completa/
+          if-no-files-found: warn
+          retention-days: 30
