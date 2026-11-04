@@ -26,3 +26,23 @@ Stylized assets, environments, and visual experimentation.
 
 **Additional foundations:** `Python` · `Java` *(basic knowledge)*  
 **Areas of interest:** Artificial Intelligence · Automation · Algorithms · Simulation · Interactive Systems
+
+---
+
+## Selected Projects
+
+<table>
+  <tr>
+    <td width="65%" valign="top">
+      <sub>01 / GAME DEVELOPMENT</sub>
+      <h3><a href="https://github.com/pie030/Dungeon-Descent">Dungeon Descent</a></h3>
+      <p><code>C</code> · <code>Win32 API</code> · <code>GDI</code></p>
+      <p>A playable dungeon-crawler prototype built in C using the native Windows API, exploring combat, character progression, and custom 2D rendering.</p>
+      <p><sub>Windows x64 · Prototype</sub></p>
+      <p><a href="https://github.com/pie030/Dungeon-Descent">View project</a></p>
+    </td>
+    <td width="35%" valign="top">
+      <a href="https://github.com/pie030/Dungeon-Descent"><img src="https://raw.githubusercontent.com/pie030/Dungeon-Descent/main/assets/character-selection.png" alt="Dungeon Descent — character selection screen" width="300" /></a>
+    </td>
+  </tr>
+</table>
