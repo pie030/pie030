@@ -46,3 +46,21 @@ Stylized assets, environments, and visual experimentation.
     </td>
   </tr>
 </table>
+
+<br>
+
+<table>
+  <tr>
+    <td width="65%" valign="top">
+      <sub>02 / INTERACTIVE DEVELOPMENT</sub>
+      <h3><a href="https://github.com/pie030/Wildgrade">Wildgrade</a></h3>
+      <p><code>JavaScript</code> · <code>WebGL</code> · <code>Canvas 2D</code></p>
+      <p>A browser-based open-world driving prototype featuring procedural landscapes, arcade vehicle physics, and experimental automatic driving.</p>
+      <p><sub>Browser · Prototype</sub></p>
+      <p><a href="https://github.com/pie030/Wildgrade">View project</a></p>
+    </td>
+    <td width="35%" valign="top">
+      <a href="https://github.com/pie030/Wildgrade"><img src="https://raw.githubusercontent.com/pie030/Wildgrade/main/assets/screenshots/driving.png" alt="Wildgrade — vehicle driving through the open world" width="300" /></a>
+    </td>
+  </tr>
+</table>
