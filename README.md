@@ -1,6 +1,10 @@
-<img src="./assets/banner.webp" alt="Pietro Braz — Game Developer &amp; 3D Environment Artist" width="100%" />
+<a href="https://pie030.github.io/" title="Visit my portfolio">
+  <img src="./assets/banner.webp" alt="Pietro Braz — Game Developer &amp; 3D Environment Artist" width="100%" />
+</a>
 
 <br>
+
+**[View portfolio ↗](https://pie030.github.io/)** — Selected projects, gameplay captures, and development notes.
 
 ## About
 
@@ -39,7 +43,7 @@ Stylized assets, environments, and visual experimentation.
       <p><code>C</code> · <code>Win32 API</code> · <code>GDI</code></p>
       <p>A playable dungeon-crawler prototype built in C using the native Windows API, exploring combat, character progression, and custom 2D rendering.</p>
       <p><sub>Windows x64 · Prototype</sub></p>
-      <p><a href="https://github.com/pie030/Dungeon-Descent">View project</a></p>
+      <p><a href="https://pie030.github.io/projects/dungeon-descent.html">View case study</a> · <a href="https://github.com/pie030/Dungeon-Descent">GitHub repository</a></p>
     </td>
     <td width="35%" valign="top">
       <a href="https://github.com/pie030/Dungeon-Descent"><img src="https://raw.githubusercontent.com/pie030/Dungeon-Descent/main/assets/character-selection.png" alt="Dungeon Descent — character selection screen" width="300" /></a>
@@ -57,7 +61,7 @@ Stylized assets, environments, and visual experimentation.
       <p><code>JavaScript</code> · <code>WebGL</code> · <code>Canvas 2D</code></p>
       <p>A browser-based open-world driving prototype featuring procedural landscapes, arcade vehicle physics, and experimental automatic driving.</p>
       <p><sub>Browser · Prototype</sub></p>
-      <p><a href="https://github.com/pie030/Wildgrade">View project</a></p>
+      <p><a href="https://pie030.github.io/projects/wildgrade.html">View case study</a> · <a href="https://github.com/pie030/Wildgrade">GitHub repository</a></p>
     </td>
     <td width="35%" valign="top">
       <a href="https://github.com/pie030/Wildgrade"><img src="https://raw.githubusercontent.com/pie030/Wildgrade/main/assets/screenshots/driving.png" alt="Wildgrade — vehicle driving through the open world" width="300" /></a>
