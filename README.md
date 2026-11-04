@@ -68,3 +68,21 @@ Stylized assets, environments, and visual experimentation.
     </td>
   </tr>
 </table>
+
+<br>
+
+<table>
+  <tr>
+    <td width="65%" valign="top">
+      <sub>03 / 3D ENVIRONMENT STUDY</sub>
+      <h3><a href="https://pie030.github.io/projects/creekside-cottage-watchtower.html">Creekside Cottage &amp; Watchtower</a></h3>
+      <p><code>Python</code> · <code>Procedural 3D</code> · <code>Low Poly</code> · <code>GLB</code></p>
+      <p>A compact environment with a cottage, watchtower, footbridge and creek. The study focuses on recognizable construction, coherent natural forms and lightweight geometry.</p>
+      <p><sub>15,582 triangles · Roblox Studio import not yet tested</sub></p>
+      <p><a href="https://pie030.github.io/projects/creekside-cottage-watchtower.html">View case study and model</a></p>
+    </td>
+    <td width="35%" valign="top">
+      <a href="https://pie030.github.io/projects/creekside-cottage-watchtower.html"><img src="https://pie030.github.io/assets/creekside-hero.webp" alt="Creekside Cottage &amp; Watchtower — render of the procedural low-poly scene" width="300" /></a>
+    </td>
+  </tr>
+</table>
