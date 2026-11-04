@@ -86,3 +86,21 @@ Stylized assets, environments, and visual experimentation.
     </td>
   </tr>
 </table>
+
+<br>
+
+<table>
+  <tr>
+    <td width="65%" valign="top">
+      <sub>04 / 3D ENVIRONMENT STUDY</sub>
+      <h3><a href="https://pie030.github.io/projects/coastal-fishing-hut-pier.html">Coastal Fishing Hut &amp; Pier</a></h3>
+      <p><code>Python</code> · <code>Procedural 3D</code> · <code>Low Poly</code> · <code>GLB</code></p>
+      <p>A compact coastal environment with a complete wooden hut, supported fishing pier, hollow rowboat, beach and coastal vegetation. Built with recognizable construction and lightweight geometry in mind.</p>
+      <p><sub>13,718 triangles · Roblox Studio import not yet tested</sub></p>
+      <p><a href="https://pie030.github.io/projects/coastal-fishing-hut-pier.html">View case study and model</a></p>
+    </td>
+    <td width="35%" valign="top">
+      <a href="https://pie030.github.io/projects/coastal-fishing-hut-pier.html"><img src="https://pie030.github.io/assets/coastal-hero.webp" alt="Coastal Fishing Hut &amp; Pier — actual low-poly model render" width="300" /></a>
+    </td>
+  </tr>
+</table>
