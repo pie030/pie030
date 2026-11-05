@@ -77,7 +77,7 @@ Stylized assets, environments, and visual experimentation.
       <sub>03 / 3D ENVIRONMENT STUDY</sub>
       <h3><a href="https://pie030.github.io/projects/creekside-cottage-watchtower.html">Creekside Cottage &amp; Watchtower</a></h3>
       <p><code>Blender refinement</code> · <code>Low Poly</code> · <code>GLB</code></p>
-      <p>A compact environment with a cottage, watchtower, footbridge and creek. The study focuses on recognizable construction, coherent natural forms and lightweight geometry, with Blender refinements to its base geometry.</p>
+      <p>A compact environment with a cottage, watchtower, footbridge and creek. Low-poly 3D environment refined in Blender, with attention to geometry, materials, and visual composition.</p>
       <p><sub>15,582 triangles · Downloadable GLB and model renders</sub></p>
       <p><a href="https://pie030.github.io/projects/creekside-cottage-watchtower.html">View case study and model</a></p>
     </td>
@@ -95,7 +95,7 @@ Stylized assets, environments, and visual experimentation.
       <sub>04 / 3D ENVIRONMENT STUDY</sub>
       <h3><a href="https://pie030.github.io/projects/coastal-fishing-hut-pier.html">Coastal Fishing Hut &amp; Pier</a></h3>
       <p><code>Blender refinement</code> · <code>Low Poly</code> · <code>GLB</code></p>
-      <p>A compact coastal environment with a complete wooden hut, supported fishing pier, hollow rowboat, beach and coastal vegetation. Built with recognizable construction and lightweight geometry in mind, with Blender refinements.</p>
+      <p>A compact coastal environment with a complete wooden hut, supported fishing pier, hollow rowboat, beach and coastal vegetation. Low-poly 3D environment refined in Blender, with attention to geometry, materials, and visual composition.</p>
       <p><sub>13,718 triangles · Downloadable GLB and model renders</sub></p>
       <p><a href="https://pie030.github.io/projects/coastal-fishing-hut-pier.html">View case study and model</a></p>
     </td>
@@ -113,7 +113,7 @@ Stylized assets, environments, and visual experimentation.
       <sub>05 / 3D ENVIRONMENT STUDY</sub>
       <h3><a href="https://pie030.github.io/projects/rural-railway-stop-freight-wagon.html">Rural Railway Stop &amp; Freight Wagon</a></h3>
       <p><code>Blender refinement</code> · <code>Low Poly</code> · <code>GLB</code></p>
-      <p>A small rural railway halt with a station, raised platform, continuous track and four-wheel freight wagon. Version 1.1 refines the woodland with continuous conifer crowns, branched broadleaf trees and all 12 tree trunks grounded inside the terrain. Blender was used for further refinement.</p>
+      <p>A small rural railway halt with a station, raised platform, continuous track and four-wheel freight wagon. Version 1.1 refines the woodland with continuous conifer crowns, branched broadleaf trees and all 12 tree trunks grounded inside the terrain. Low-poly 3D environment refined in Blender, with attention to geometry, materials, and visual composition.</p>
       <p><sub>21,722 triangles · Refined woodland and downloadable GLB</sub></p>
       <p><a href="https://pie030.github.io/projects/rural-railway-stop-freight-wagon.html">View case study and model</a></p>
     </td>
