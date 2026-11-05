@@ -1,5 +1,5 @@
 <a href="https://pie030.github.io/" title="Visit my portfolio">
-  <img src="./assets/banner.webp" alt="Pietro Braz — Game Developer &amp; 3D Environment Artist" width="100%" />
+  <img src="./assets/banner.webp" alt="Pietro Braz — Desenvolvimento, Modelagem 3D e Arte Digital" width="100%" />
 </a>
 
 <br>
