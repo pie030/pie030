@@ -78,7 +78,7 @@ Stylized assets, environments, and visual experimentation.
       <h3><a href="https://pie030.github.io/projects/creekside-cottage-watchtower.html">Creekside Cottage &amp; Watchtower</a></h3>
       <p><code>Python</code> · <code>Procedural 3D</code> · <code>Low Poly</code> · <code>GLB</code></p>
       <p>A compact environment with a cottage, watchtower, footbridge and creek. The study focuses on recognizable construction, coherent natural forms and lightweight geometry.</p>
-      <p><sub>15,582 triangles · Roblox Studio import not yet tested</sub></p>
+      <p><sub>15,582 triangles · Downloadable GLB and model renders</sub></p>
       <p><a href="https://pie030.github.io/projects/creekside-cottage-watchtower.html">View case study and model</a></p>
     </td>
     <td width="35%" valign="top">
@@ -96,7 +96,7 @@ Stylized assets, environments, and visual experimentation.
       <h3><a href="https://pie030.github.io/projects/coastal-fishing-hut-pier.html">Coastal Fishing Hut &amp; Pier</a></h3>
       <p><code>Python</code> · <code>Procedural 3D</code> · <code>Low Poly</code> · <code>GLB</code></p>
       <p>A compact coastal environment with a complete wooden hut, supported fishing pier, hollow rowboat, beach and coastal vegetation. Built with recognizable construction and lightweight geometry in mind.</p>
-      <p><sub>13,718 triangles · Roblox Studio import not yet tested</sub></p>
+      <p><sub>13,718 triangles · Downloadable GLB and model renders</sub></p>
       <p><a href="https://pie030.github.io/projects/coastal-fishing-hut-pier.html">View case study and model</a></p>
     </td>
     <td width="35%" valign="top">
@@ -114,7 +114,7 @@ Stylized assets, environments, and visual experimentation.
       <h3><a href="https://pie030.github.io/projects/rural-railway-stop-freight-wagon.html">Rural Railway Stop &amp; Freight Wagon</a></h3>
       <p><code>Python</code> · <code>Procedural 3D</code> · <code>Low Poly</code> · <code>GLB</code></p>
       <p>A small rural railway halt with a station, raised platform, continuous track and four-wheel freight wagon. Version 1.1 refines the woodland with continuous conifer crowns, branched broadleaf trees and all 12 tree trunks grounded inside the terrain.</p>
-      <p><sub>21,722 triangles · Roblox Studio import not yet tested</sub></p>
+      <p><sub>21,722 triangles · Refined woodland and downloadable GLB</sub></p>
       <p><a href="https://pie030.github.io/projects/rural-railway-stop-freight-wagon.html">View case study and model</a></p>
     </td>
     <td width="35%" valign="top">
