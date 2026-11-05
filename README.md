@@ -113,8 +113,8 @@ Stylized assets, environments, and visual experimentation.
       <sub>05 / 3D ENVIRONMENT STUDY</sub>
       <h3><a href="https://pie030.github.io/projects/rural-railway-stop-freight-wagon.html">Rural Railway Stop &amp; Freight Wagon</a></h3>
       <p><code>Python</code> · <code>Procedural 3D</code> · <code>Low Poly</code> · <code>GLB</code></p>
-      <p>A small rural railway halt with a station, raised platform, continuous track and four-wheel freight wagon. The study focuses on recognizable architecture, grounded geometry and coherent railway construction.</p>
-      <p><sub>21,302 triangles · Roblox Studio import not yet tested</sub></p>
+      <p>A small rural railway halt with a station, raised platform, continuous track and four-wheel freight wagon. Version 1.1 refines the woodland with continuous conifer crowns, branched broadleaf trees and all 12 tree trunks grounded inside the terrain.</p>
+      <p><sub>21,722 triangles · Roblox Studio import not yet tested</sub></p>
       <p><a href="https://pie030.github.io/projects/rural-railway-stop-freight-wagon.html">View case study and model</a></p>
     </td>
     <td width="35%" valign="top">
